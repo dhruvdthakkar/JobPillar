@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">Jobs<b>Pillar</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+      aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html" style="padding-right:80px;">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="search.html" style="padding-right:80px;">
+            Search</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="applications.html" style="padding-right:80px;">
+            Apply</a>
+        </li>
+        <li class="nav-item dropdown" style="">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Profile </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+            <a class="dropdown-item" href="matched.html">Matched Candidates</a>
+            <a class="dropdown-item" href="signup.html">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+        
+        </div>
+    </div>
+</nav>
+{{#if isAdmin}}
+<div>
+    <h3>Faculty</h3>
+    {{#each faculty}}
+    <div class="card material-faculty" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{email}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <h3>Student</h3>
+    {{#each student}}
+    <div class="card material-faculty" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{email}}</p>
+            <p class="card-text">{{enrollment}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<div class="card card-body" style="width: 50%; margin-bottom: 200px;margin-top: 50px">
+    <form method="post" action="/admin">
+        <div class="form-group">
+            <label for="password">Password<span style="color: red">*</span></label>
+            <input type="password" name="password" class="form-control" placeholder="Admin Password" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{{/if}}

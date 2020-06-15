@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+          <div class="col-md-6">
+            
+           <img class="img img-fluid login-image" src="../image/signup.svg">
+          </div><!-- ends col-6 -->
+     
+              <div class="col-md-6">
+                
+                  <!-- Default form login -->
+<form method="post" action="/signup">
+  <h1 class="login-title">Jobs.</h1>
+  <p class="login-subtitle">Made Easier.</p>
+  
+  <p class="h4 mb-4">Register your Company</p>
+
+  <!-- Email -->
+  <div class="row">
+  <div class="col-6"><input type="text" id="fname" class="form-control mb-4" name="name" placeholder="Company Name" required></div>
+  <div class="col-6"><input type="text" id="lname" class="form-control mb-4" name="hname" placeholder="Owner/HR's Name" required> </div>
+</div>
+  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" name="email" placeholder="E-mail" required>
+
+  <!-- Password -->
+  <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password" required>
+  <input type="password" id="confirm_password" name="password2" class="form-control mb-4" placeholder="Confirm Password" required>
+
+  <div class="d-flex justify-content-around">
+      <div>
+          <!-- Remember me -->
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember" required>
+              <label class="custom-control-label" for="defaultLoginFormRemember">I hereby agree to <a href="#">Terms & Conditions</a></label>
+          </div>
+      </div>
+  </div>
+
+  <!-- Sign in button -->
+  <button class="btn btn-success btn-block my-4" type="submit">Sign up</button>
+
+  <!-- Register -->
+  <p>Already have an account?
+      <a href="login">Sign in</a>
+  </p>
+
+</form>
+              
+  
+    </div>
+  </div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+          <div class="col-md-6">
+            
+           <img class="img img-fluid login-image" src="../image/login.svg">
+          </div><!-- ends col-6 -->
+     
+              <div class="col-md-6">
+                
+                  <!-- Default form login -->
+<form method="post" action="/login">
+  <h1 class="login-title">Jobs.</h1>
+  <p class="login-subtitle">Made Easier.</p>
+  
+  <p class="h4 mb-4">Welcome Back!</p>
+
+  <!-- Email -->
+  <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" required>
+
+  <!-- Password -->
+  <input type="password" name="password" id="password" class="form-control mb-4" placeholder="Password" required>
+  
+  <div class="d-flex justify-content-around">
+      <div>
+          <!-- Remember me -->
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember" required>
+              <label class="custom-control-label" for="defaultLoginFormRemember">I hereby agree to <a href="#">Terms & Conditions</a></label>
+          </div>
+      </div>
+  </div>
+
+  <!-- Sign in button -->
+  <button type="submit" class="btn btn-success btn-block my-4">Sign up</button>
+
+  <!-- Register -->
+  <p>Don't have an account?
+      <a href="signup">Register your Company here</a>
+  </p>
+
+</form>
